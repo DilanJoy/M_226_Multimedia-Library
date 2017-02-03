@@ -9,10 +9,17 @@ public class Menu {
 	public void sectionQuestion() {
 		System.out.println("Möchten Sie Bücher oder Filme anschauen.");
 		answer = scan.nextLine();
-		if (answer == "Bücher") {
-			switchToBooks();
-		} else if (answer == "Filme") {
-			switchToMovies();
+		switch(answer){
+		case "Bücher":
+				switchToBooks();
+				break;
+		case "Filme":
+				switchToMovies();
+				break;
+		default:
+				System.out.println("Ungültige Antwort");
+				break;
+		
 		}
 	}
 
